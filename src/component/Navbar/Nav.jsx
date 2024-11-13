@@ -71,39 +71,40 @@ export default function Nav() {
 
             <main className="container mx-auto px-4 pt-20">
                 <section id="home" className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
+                    <div className="text-center md:flex items-center justify-center flex-col">
                         <h1 className="text-4xl md:text-6xl font-bold mb-4">Jyoti Patil</h1>
                         <p className="text-xl md:text-2xl mb-8">Frontend Developer</p>
                         <button
                             onClick={() => window.open('/path-to-your-resume.pdf', '_blank')}
-                            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 flex items-center justify-between"
+                            className="bg-blue-500 text-white px-4 py-2 rounded-md gap-2 hover:bg-blue-600 transition duration-300 flex items-center justify-center"
                         >
                             Download Resume
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="inline-block ml-2 w-6 h-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 16l4-4m0 0l4 4m-4-4v12M4 12h16"
-                                />
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+</svg>
+
                         </button>
                     </div>
                 </section>
 
                 <section id="about" className="py-20">
+                    <div>
+                        <div>
+
+                            <img src="../../images/about-me.png" alt="" />
+                        </div>
+
+
+
+                        <div>
                     <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
                     <p className="text-lg max-w-2xl mx-auto text-center">
                         I'm a passionate frontend developer with 1 year of experience in creating responsive and user-friendly web
                         applications. I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not
                         coding, you can find me exploring new technologies or contributing to open-source projects.
                     </p>
+                    </div>
+                    </div>
                 </section>
 
                 <section id="skills" className="py-20">
