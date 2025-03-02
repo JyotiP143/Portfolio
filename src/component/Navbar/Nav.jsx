@@ -1,114 +1,21 @@
-// "use client";
-
-// import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "../../index.css";
-
-// export default function Home() {
-//   const [activeLink, setActiveLink] = useState("Home");
-
-//   return (
-//     <div className="md:min-h-screen bg-[#1a1e23] relative overflow-hidden">
-//       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#00e5ff]/20 pointer-events-none">
-//       </div>
-//       <div className=" px-4 sm:px-6 lg:px-8 relative">
-//         <div className="bg-[#232830] rounded-3xl shadow-2xl overflow-hidden my-8 relative">
-//           <header className="flex justify-between items-center p-8">
-//             <div className="text-white text-2xl font-bold">Portfolio</div>
-//             <nav className="hidden md:flex space-x-8">
-//               {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
-//                 <Link
-//                   href="#"
-//                   key={item}
-//                   className={`${item === activeLink ? "text-[#00e5ff]" : "text-white"
-//                     } hover:text-[#00e5ff] transition-colors`}
-//                   onClick={() => setActiveLink(item)}
-//                 >
-//                   {item}
-//                 </Link>
-//               ))}
-//             </nav>
-//           </header>
-//           <main className="p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
-//             <div className="md:w-1/2 space-y-6">
-//               <h2 className="text-white text-2xl">Hello, It's Me</h2>
-//               <h1 className="text-white text-5xl md:text-6xl font-bold">Jyoti Patil</h1>
-//               <h3 className="text-2xl text-white">
-//                 And I'm a <span className="text-[#00e5ff]">Frontend Developer</span>
-//               </h3>
-//               <p className="text-gray-400 max-w-lg">
-//                 Passionate about creating interactive applications and experiences on the web.
-//               </p>
-//               <div className="flex space-x-4 pt-4">
-//                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-//                   <Link
-//                     href="#"
-//                     key={index}
-//                     className="bg-[#232830] border border-[#00e5ff]/30 p-3 rounded-full text-[#00e5ff] hover:bg-[#00e5ff] hover:text-[#232830] transition-colors"
-//                   >
-//                     <Icon size={20} />
-//                   </Link>
-//                 ))}
-//               </div>
-//               <div className="pt-6">
-//                 <Link
-//                   href="#"
-//                   className="bg-[#00e5ff] text-[#232830] px-8 py-3 rounded-full font-medium hover:bg-[#00c2d8] transition-colors inline-block"
-//                 >
-//                   Download CV
-//                 </Link>
-//               </div>
-//             </div>
-//             <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
-//               <div className="relative w-[320px] h-[370px] flex items-center justify-center">
-//                 <div className="absolute inset-0 bg-[#00e5ff]/50 blur-xl transform scale-105 z-0 hexagon"></div>
-//                 <div className="w-full h-full overflow-hidden relative z-10 hexagon">
-//                   <img src="/profile.jpg" alt="Profile" width="400" height="400" />
-//                 </div>
-//               </div>
-//             </div>
-//           </main>
-
-//           <div>
-//             <p>about us</p>
-//           </div>
-//           <div>
-//             <p>skills</p>
-//           </div>
-//           <div>
-//             <p>personal projects</p>
-//           </div>
-//           <div>
-//             <p>contact us</p>
-//           </div>
-//           <div>
-//             <p>footer</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
 "use client"
 
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin, ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import '../../index.css'
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState("Home")
 
-  const skills = [
-    { name: "HTML", percentage: 90 },
-    { name: "CSS", percentage: 85 },
-    { name: "JavaScript", percentage: 80 },
-    { name: "React", percentage: 75 },
-    { name: "Tailwind CSS", percentage: 85 },
-    { name: "Node.js", percentage: 65 },
-  ]
+  // const skills = [
+  //   { name: "HTML", percentage: 90 },
+  //   { name: "CSS", percentage: 85 },
+  //   { name: "JavaScript", percentage: 80 },
+  //   { name: "React", percentage: 75 },
+  //   { name: "Tailwind CSS", percentage: 85 },
+  //   { name: "Node.js", percentage: 65 },
+  // ]
 
   const projects = [
     {
@@ -144,7 +51,7 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
                 <Link
-                  href="#"
+                  href={`#${item.toLowerCase()}`}
                   key={item}
                   className={`${item === activeLink ? "text-[#00e5ff]" : "text-white"
                     } hover:text-[#00e5ff] transition-colors`}
@@ -188,8 +95,8 @@ export default function Home() {
             <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
               <div className="relative w-[320px] h-[370px] flex items-center justify-center">
                 <div className="absolute inset-0 bg-[#00e5ff]/50 blur-xl transform scale-105 z-0 hexagon"></div>
-                <div className="w-full h-full overflow-hidden relative z-10 hexagon">
-                  <img src="/profile.jpg" alt="Profile" width="400" height="400" />
+                <div className="w-full h-full overflow-hidden relative z-10 hexagon rounded ">
+                  <img src="../Image/img-1.jpg" alt="Profile" width="400" height="400"  />
                 </div>
               </div>
             </div>
@@ -208,7 +115,7 @@ export default function Home() {
                   <div className="relative">
                     <div className="absolute -inset-2 bg-[#00e5ff]/20 blur-md rounded-lg"></div>
                     <div className="relative rounded-lg overflow-hidden border-2 border-[#00e5ff]/30">
-                      <img src="/about-image.jpg" alt="About Me" className="w-full h-auto object-cover" />
+                      <img src="../Image/img-1.jpg" alt="About Me" className="w-full h-auto object-cover" />
                     </div>
                   </div>
                 </div>
@@ -217,7 +124,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-white mb-4">Frontend Developer & UI/UX Designer</h3>
                   <p className="text-gray-400 mb-6">
                     I am a passionate frontend developer with a strong focus on creating intuitive and engaging user
-                    experiences. With 3+ years of experience in web development, I specialize in building responsive,
+                    experiences. With 1+ years of experience in web development, I specialize in building responsive,
                     accessible, and performance-optimized applications using modern technologies.
                   </p>
                   <p className="text-gray-400 mb-6">
@@ -226,32 +133,7 @@ export default function Home() {
                     technologies to stay at the forefront of web development.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#00e5ff]">•</span>
-                      <span>
-                        <strong>Name:</strong> Jyoti Patil
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#00e5ff]">•</span>
-                      <span>
-                        <strong>Email:</strong> jyoti@example.com
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#00e5ff]">•</span>
-                      <span>
-                        <strong>Location:</strong> Mumbai, India
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#00e5ff]">•</span>
-                      <span>
-                        <strong>Freelance:</strong> Available
-                      </span>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -265,7 +147,7 @@ export default function Home() {
                 <div className="w-20 h-1 bg-[#00e5ff] mx-auto"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {skills.map((skill, index) => (
                   <div key={index} className="mb-6">
                     <div className="flex justify-between mb-2">
@@ -280,7 +162,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
@@ -289,9 +171,8 @@ export default function Home() {
                   { icon: "devicon-javascript-plain", name: "JavaScript" },
                   { icon: "devicon-react-original", name: "React" },
                   { icon: "devicon-tailwindcss-plain", name: "Tailwind" },
-                  { icon: "devicon-nodejs-plain", name: "Node.js" },
                   { icon: "devicon-git-plain", name: "Git" },
-                  { icon: "devicon-figma-plain", name: "Figma" },
+                  { icon: "devicon-seo", name: "SEO" },
                 ].map((tech, index) => (
                   <div
                     key={index}
@@ -376,7 +257,7 @@ export default function Home() {
                 <div className="w-20 h-1 bg-[#00e5ff] mx-auto"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="bg-[#1a1e23] p-6 rounded-xl border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all flex flex-col items-center text-center">
                   <div className="w-14 h-14 bg-[#00e5ff]/10 rounded-full flex items-center justify-center mb-4">
                     <Mail className="text-[#00e5ff]" size={24} />
@@ -414,7 +295,7 @@ export default function Home() {
                     View on map
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               <div className="bg-[#1a1e23] p-8 rounded-xl border border-[#00e5ff]/10">
                 <form>
