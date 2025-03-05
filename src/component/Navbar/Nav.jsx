@@ -34,11 +34,11 @@ export default function Home() {
   ]
 
   return (
-    <div className="md:min-h-screen bg-[#1a1e23] relative overflow-hidden">
+    <div className=" bg-[#1a1e23] relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#00e5ff]/20 pointer-events-none"></div>
       <div className="px-4 sm:px-6 lg:px-8 relative">
         <div className="bg-[#232830] rounded-3xl shadow-2xl overflow-hidden my-8 relative">
-          <header className="flex justify-between items-center p-8">
+          <header className="md:flex block justify-around items-center p-8 ">
             <div className="text-white text-2xl font-bold">Portfolio</div>
             <nav className="hidden md:flex space-x-8">
               {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
@@ -55,15 +55,18 @@ export default function Home() {
             </nav>
           </header>
           {/* flex-col md:flex-row */}
-          <main className="p-8 md:p-8 flex  items-center ">
-            <div className="md:w-1/2 space-y-6 flex flex-col items-center justify-start">
+          <main className="p-8 md:p-8 md:flex  items-center ">
+            <div className="md:w-1/2 space-y-6 md:flex flex-col items-center justify-start">
               <h2 className="text-white text-2xl text-left">Hello, It's Me</h2>
               <h1 className="text-white text-5xl md:text-6xl font-bold">Jyoti Patil</h1>
               <h3 className="text-2xl text-white">
                 And I'm a <span className="text-[#00e5ff]">Frontend Developer</span>
               </h3>
               <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
-                Passionate about creating interactive applications and experiences on the web.
+                Passionate about creating interactive 
+              </p>
+              <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
+                applications and experiences on the web.
               </p>
               <div className="flex space-x-4 pt-4">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
@@ -103,7 +106,7 @@ export default function Home() {
                 <div className="w-20 h-1 bg-[#00e5ff] mx-auto"></div>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="flex flex-col md:flex-row items-center justify-around gap-12">
                 <div className="md:w-[30%]">
                   <div className="relative">
                     <div className="absolute -inset-2 bg-[#00e5ff]/20 blur-md rounded-lg"></div>
