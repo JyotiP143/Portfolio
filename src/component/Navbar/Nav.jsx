@@ -8,15 +8,7 @@ import '../../index.css'
 export default function Home() {
   const [activeLink, setActiveLink] = useState("Home")
 
-  // const skills = [
-  //   { name: "HTML", percentage: 90 },
-  //   { name: "CSS", percentage: 85 },
-  //   { name: "JavaScript", percentage: 80 },
-  //   { name: "React", percentage: 75 },
-  //   { name: "Tailwind CSS", percentage: 85 },
-  //   { name: "Node.js", percentage: 65 },
-  // ]
-
+ 
   const projects = [
     {
       title: "E-Commerce Website",
@@ -62,14 +54,15 @@ export default function Home() {
               ))}
             </nav>
           </header>
-          <main className="p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 space-y-6">
-              <h2 className="text-white text-2xl">Hello, It's Me</h2>
+          {/* flex-col md:flex-row */}
+          <main className="p-8 md:p-8 flex  items-center ">
+            <div className="md:w-1/2 space-y-6 flex flex-col items-center justify-start">
+              <h2 className="text-white text-2xl text-left">Hello, It's Me</h2>
               <h1 className="text-white text-5xl md:text-6xl font-bold">Jyoti Patil</h1>
               <h3 className="text-2xl text-white">
                 And I'm a <span className="text-[#00e5ff]">Frontend Developer</span>
               </h3>
-              <p className="text-gray-400 max-w-lg">
+              <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
                 Passionate about creating interactive applications and experiences on the web.
               </p>
               <div className="flex space-x-4 pt-4">
@@ -93,7 +86,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
-              <div className="relative w-[320px] h-[370px] flex items-center justify-center">
+              <div className="relative w-[350px] h-[370px] flex items-center justify-center">
                 <div className="absolute inset-0 bg-[#00e5ff]/50 blur-xl transform scale-105 z-0 hexagon"></div>
                 <div className="w-full h-full overflow-hidden relative z-10 hexagon rounded ">
                   <img src="../Image/img-1.jpg" alt="Profile" width="400" height="400"  />
@@ -111,7 +104,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col md:flex-row items-center gap-12">
-                <div className="md:w-2/5">
+                <div className="md:w-[30%]">
                   <div className="relative">
                     <div className="absolute -inset-2 bg-[#00e5ff]/20 blur-md rounded-lg"></div>
                     <div className="relative rounded-lg overflow-hidden border-2 border-[#00e5ff]/30">
@@ -146,23 +139,6 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">My Skills</h2>
                 <div className="w-20 h-1 bg-[#00e5ff] mx-auto"></div>
               </div>
-
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {skills.map((skill, index) => (
-                  <div key={index} className="mb-6">
-                    <div className="flex justify-between mb-2">
-                      <span className="text-white font-medium">{skill.name}</span>
-                      <span className="text-[#00e5ff]">{skill.percentage}%</span>
-                    </div>
-                    <div className="w-full bg-[#1a1e23] rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-[#00e5ff]/80 to-[#00e5ff] h-2.5 rounded-full"
-                        style={{ width: `${skill.percentage}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div> */}
 
               <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
@@ -256,46 +232,6 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Get In Touch</h2>
                 <div className="w-20 h-1 bg-[#00e5ff] mx-auto"></div>
               </div>
-
-              {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-[#1a1e23] p-6 rounded-xl border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-[#00e5ff]/10 rounded-full flex items-center justify-center mb-4">
-                    <Mail className="text-[#00e5ff]" size={24} />
-                  </div>
-                  <h3 className="text-white font-medium mb-2">Email</h3>
-                  <p className="text-gray-400">jyoti@example.com</p>
-                  <a href="mailto:jyoti@example.com" className="text-[#00e5ff] text-sm mt-2 hover:underline">
-                    Send a message
-                  </a>
-                </div>
-
-                <div className="bg-[#1a1e23] p-6 rounded-xl border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-[#00e5ff]/10 rounded-full flex items-center justify-center mb-4">
-                    <Phone className="text-[#00e5ff]" size={24} />
-                  </div>
-                  <h3 className="text-white font-medium mb-2">Phone</h3>
-                  <p className="text-gray-400">+91 98765 43210</p>
-                  <a href="tel:+919876543210" className="text-[#00e5ff] text-sm mt-2 hover:underline">
-                    Call me
-                  </a>
-                </div>
-
-                <div className="bg-[#1a1e23] p-6 rounded-xl border border-[#00e5ff]/10 hover:border-[#00e5ff]/30 transition-all flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-[#00e5ff]/10 rounded-full flex items-center justify-center mb-4">
-                    <MapPin className="text-[#00e5ff]" size={24} />
-                  </div>
-                  <h3 className="text-white font-medium mb-2">Location</h3>
-                  <p className="text-gray-400">Mumbai, Maharashtra, India</p>
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#00e5ff] text-sm mt-2 hover:underline"
-                  >
-                    View on map
-                  </a>
-                </div>
-              </div> */}
 
               <div className="bg-[#1a1e23] p-8 rounded-xl border border-[#00e5ff]/10">
                 <form>
