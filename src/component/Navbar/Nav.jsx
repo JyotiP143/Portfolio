@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react"
+import { ExternalLink, Github, Linkedin } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import '../../index.css'
@@ -8,26 +8,36 @@ import '../../index.css'
 export default function Home() {
   const [activeLink, setActiveLink] = useState("Home")
 
+  const scrollSection =(id)=>{
+   const section = document.getElementById(id);
+   if(section)
+   {
+    window.scrollTo({
+      top:section.offsetTop - 50,
+      behavior:"smooth",
+    })
+   }
+  };
  
   const projects = [
     {
       title: "E-Commerce Website",
       description: "A fully responsive e-commerce platform with cart functionality and payment integration.",
-      image: "/project1.jpg",
+      image: "../Image/E-Commerce-portfolio image.jpg",
       technologies: ["React", "Node.js", "MongoDB"],
       links: { demo: "#", github: "#" },
     },
     {
       title: "Task Management App",
       description: "A drag-and-drop task management application with user authentication.",
-      image: "/project2.jpg",
+      image: "../Image/taskManagement-Portfolio-img.jpg",
       technologies: ["React", "Firebase", "Tailwind CSS"],
       links: { demo: "#", github: "#" },
     },
     {
       title: "Weather Dashboard",
       description: "Real-time weather application with location-based forecasts and interactive maps.",
-      image: "/project3.jpg",
+      image: "../Image/weather-portfolio-img.jpg",
       technologies: ["JavaScript", "Weather API", "Chart.js"],
       links: { demo: "#", github: "#" },
     },
@@ -38,19 +48,22 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#00e5ff]/20 pointer-events-none"></div>
       <div className="px-4 sm:px-6 lg:px-8 relative">
         <div className="bg-[#232830] rounded-3xl shadow-2xl overflow-hidden my-8 relative">
-          <header className="md:flex block justify-around items-center p-8 ">
+          <header className="md:flex block justify-around items-center p-8  ">
             <div className="text-white text-2xl font-bold">Portfolio</div>
             <nav className="hidden md:flex space-x-8">
-              {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
-                <Link
-                  href={`#${item.toLowerCase()}`}
+              {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+                <button
+                  // href={`#${item.toLowerCase()}`}
                   key={item}
-                  className={`${item === activeLink ? "text-[#00e5ff]" : "text-white"
-                    } hover:text-[#00e5ff] transition-colors`}
-                  onClick={() => setActiveLink(item)}
+                  className={`${item === activeLink ? "text-[#00e5ff] border-b-2 border-b-[#00e5ff]" : "text-white"
+                    } hover:text-[#00e5ff]  transition-colors `}
+                  onClick={() => {setActiveLink(item);
+                    scrollSection(item.toLowerCase())
+                  }
+                }
                 >
                   {item}
-                </Link>
+                </button>
               ))}
             </nav>
           </header>
@@ -68,14 +81,19 @@ export default function Home() {
               <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
                 applications and experiences on the web.
               </p>
-              <div className="flex space-x-4 pt-4">
-                {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              <div className="flex justify-center space-x-4 mb-8">
+                {[
+                  {Icon :Linkedin ,url :"https://www.linkedin.com/in/jyoti-patil-969a70268" },
+                  {Icon :Github ,url:"https://github.com/JyotiP143"}
+                ]
+              
+               .map(({Icon, url}, index) => (
                   <Link
-                    href="#"
+                    href={url}
                     key={index}
                     className="bg-[#232830] border border-[#00e5ff]/30 p-3 rounded-full text-[#00e5ff] hover:bg-[#00e5ff] hover:text-[#232830] transition-colors"
                   >
-                    <Icon size={20} />
+                    <Icon size={18} />
                   </Link>
                 ))}
               </div>
@@ -290,9 +308,14 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center space-x-4 mb-8">
-                {[Facebook, Twitter, Instagram, Linkedin, Github].map((Icon, index) => (
+                {[
+                  {Icon :Linkedin ,url :"https://www.linkedin.com/in/jyoti-patil-969a70268" },
+                  {Icon :Github ,url:"https://github.com/JyotiP143"}
+                ]
+              
+               .map(({Icon, url}, index) => (
                   <Link
-                    href="#"
+                    href={url}
                     key={index}
                     className="bg-[#232830] border border-[#00e5ff]/30 p-3 rounded-full text-[#00e5ff] hover:bg-[#00e5ff] hover:text-[#232830] transition-colors"
                   >
