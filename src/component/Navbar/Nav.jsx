@@ -2,7 +2,6 @@
 
 import { ExternalLink, Github, Linkedin } from "lucide-react"
 import { useState } from "react"
-import { Link } from "react-router-dom"
 import '../../index.css'
 
 export default function Home() {
@@ -53,7 +52,6 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
                 <button
-                  // href={`#${item.toLowerCase()}`}
                   key={item}
                   className={`${item === activeLink ? "text-[#00e5ff] border-b-2 border-b-[#00e5ff]" : "text-white"
                     } hover:text-[#00e5ff]  transition-colors `}
@@ -88,22 +86,25 @@ export default function Home() {
                 ]
               
                .map(({Icon, url}, index) => (
-                  <Link
+                  <a
                     href={url}
                     key={index}
+                    target="_blank"
                     className="bg-[#232830] border border-[#00e5ff]/30 p-3 rounded-full text-[#00e5ff] hover:bg-[#00e5ff] hover:text-[#232830] transition-colors"
                   >
                     <Icon size={18} />
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="pt-6">
-                <Link
-                  href="#"
+                <a
+                href="/cv.pdf.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
                   className="bg-[#00e5ff] text-[#232830] px-8 py-3 rounded-full font-medium hover:bg-[#00c2d8] transition-colors inline-block"
                 >
                   Download CV
-                </Link>
+                </a>
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center mt-12 md:mt-0">
@@ -235,14 +236,14 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-center mt-12">
+              {/* <div className="text-center mt-12">
                 <Link
                   href="#"
                   className="border border-[#00e5ff] text-[#00e5ff] px-8 py-3 rounded-full font-medium hover:bg-[#00e5ff] hover:text-[#232830] transition-colors inline-block"
                 >
                   View All Projects
                 </Link>
-              </div>
+              </div> */}
             </div>
           </section>
 
@@ -314,32 +315,32 @@ export default function Home() {
                 ]
               
                .map(({Icon, url}, index) => (
-                  <Link
+                  <a
                     href={url}
                     key={index}
+                    target="_blank"
                     className="bg-[#232830] border border-[#00e5ff]/30 p-3 rounded-full text-[#00e5ff] hover:bg-[#00e5ff] hover:text-[#232830] transition-colors"
                   >
                     <Icon size={18} />
-                  </Link>
+                  </a>
                 ))}
               </div>
 
               <div className="flex justify-center space-x-6 text-gray-400 text-sm mb-6">
-                <Link href="#" className="hover:text-[#00e5ff] transition-colors">
-                  Home
-                </Link>
-                <Link href="#" className="hover:text-[#00e5ff] transition-colors">
-                  About
-                </Link>
-                <Link href="#" className="hover:text-[#00e5ff] transition-colors">
-                  Skills
-                </Link>
-                <Link href="#" className="hover:text-[#00e5ff] transition-colors">
-                  Portfolio
-                </Link>
-                <Link href="#" className="hover:text-[#00e5ff] transition-colors">
-                  Contact
-                </Link>
+               {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+                <button
+                  // href={`#${item.toLowerCase()}`}
+                  key={item}
+                  className={`${item === activeLink ? "text-[#00e5ff] border-b-2 border-b-[#00e5ff]" : "text-white"
+                    } hover:text-[#00e5ff]  transition-colors `}
+                  onClick={() => {setActiveLink(item);
+                    scrollSection(item.toLowerCase())
+                  }
+                }
+                >
+                  {item}
+                </button>
+              ))}
               </div>
 
               <div className="text-gray-500 text-sm">
