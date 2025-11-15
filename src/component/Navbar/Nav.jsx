@@ -68,16 +68,16 @@ export default function Home() {
           {/* flex-col md:flex-row */}
           <main className="p-8 md:p-8 md:flex  items-center ">
             <div className="md:w-1/2 space-y-6 md:flex flex-col items-center justify-start">
-              <h2 className="text-white text-2xl text-left">Hello, It's Me</h2>
+              <h2 className="text-white text-2xl text-left">Hello, I’m </h2>
               <h1 className="text-white text-5xl md:text-6xl font-bold">Jyoti Patil</h1>
               <h3 className="text-2xl text-white">
-                And I'm a <span className="text-[#00e5ff]">Frontend Developer</span>
+              <span className="text-[#00e5ff]">Frontend Developer</span>
               </h3>
               <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
-                Passionate about creating interactive 
+                I craft clean, modern, and responsive web interfaces with a strong focus on performance and user experience. 
               </p>
               <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
-                applications and experiences on the web.
+               I love turning creative ideas into interactive digital experiences using the latest frontend technologies.
               </p>
               <div className="flex justify-center space-x-4 mb-8">
                 {[
@@ -138,14 +138,10 @@ export default function Home() {
                 <div className="md:w-3/5">
                   <h3 className="text-2xl font-bold text-white mb-4">Frontend Developer & UI/UX Designer</h3>
                   <p className="text-gray-400 mb-6">
-                    I am a passionate frontend developer with a strong focus on creating intuitive and engaging user
-                    experiences. With 1+ years of experience in web development, I specialize in building responsive,
-                    accessible, and performance-optimized applications using modern technologies.
+                   I’m a passionate Frontend Developer with over 1 year of experience building responsive, fast, and user-focused web applications. I specialize in React.js, Next.js, React Native, JavaScript, and Tailwind CSS, with a strong understanding of UI/UX principles..
                   </p>
                   <p className="text-gray-400 mb-6">
-                    My approach combines clean code practices with creative problem-solving to deliver solutions that
-                    not only meet but exceed client expectations. I'm constantly learning and adapting to new
-                    technologies to stay at the forefront of web development.
+                   I enjoy creating interfaces that look beautiful and feel smooth to use. My development approach combines clean code practices, attention to detail, and continuous learning. I stay updated with modern tools and technologies to deliver high-quality, scalable solutions.
                   </p>
 
                  
