@@ -24,15 +24,15 @@ export default function Home() {
       description: "A fully responsive e-commerce platform with cart functionality and payment integration.",
       image: "../Image/E-Commerce-portfolio image.jpg",
       technologies: ["React", "Node.js", "MongoDB"],
-      links: { demo: "#", github: "#" },
+      links: { demo: "https://front-end-ecommerce-reactvite.vercel.app/", github: "https://github.com/JyotiP143/FrontEnd-Ecommerce-reactvite" },
     },
-    {
-      title: "Task Management App",
-      description: "A drag-and-drop task management application with user authentication.",
-      image: "../Image/taskManagement-Portfolio-img.jpg",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
-      links: { demo: "#", github: "#" },
-    },
+    // {
+    //   title: "Task Management App",
+    //   description: "A drag-and-drop task management application with user authentication.",
+    //   image: "../Image/taskManagement-Portfolio-img.jpg",
+    //   technologies: ["React", "Firebase", "Tailwind CSS"],
+    //   links: { demo: "#", github: "#" },
+    // },
     {
       title: "Weather Dashboard",
       description: "Real-time weather application with location-based forecasts and interactive maps.",
@@ -79,7 +79,7 @@ export default function Home() {
               <p className="text-gray-400 max-w-lg md:text-[1.2vw] text-[5vw]">
                I love turning creative ideas into interactive digital experiences using the latest frontend technologies.
               </p>
-              <div className="flex justify-center space-x-4 mb-8">
+              <div className="flex justify-start space-x-4 mb-8">
                 {[
                   {Icon :Linkedin ,url :"https://www.linkedin.com/in/jyoti-patil-969a70268" },
                   {Icon :Github ,url:"https://github.com/JyotiP143"}
